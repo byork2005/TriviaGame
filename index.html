@@ -7,16 +7,76 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		
 	</head>
 
 	<body>
 
 		<div class="wrapper">
 
+			<header class="row">
+				<div>Trivia Game</div>
+			</header>
+
+			<div class="row">
+				<button id="startbutton"> Start Game </button>
+			</div>
+
+			<div class="row timer">
+				<div>Timer</div>
+			</div>
+
+			<!-- Questions -->
+			<div class="row question" id="q1">
+				<div>Question 1 content</div>
+				<div>
+					<ul>
+						<li class="answer">Stego</li>
+						<li class="answer true">T-Rex</li>  
+						<li class="answer">Bronto</li>
+						<li class="answer">Trike</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row question" id="q2">
+				<div>Question 2 content</div>
+				<div>
+					<ul>
+						<li class="answer">E</li>
+						<li class="answer">F</li>
+						<li class="answer">G</li>
+						<li class="answer">H</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Bumper -->
+
+			<div class="row bumper">
+				<div id="message">Message</div>
+				<div id="correct">The answer is:</div>
+				<img src="assets/images/sapphire.png" id="bumperImage" alt="">
+			</div>
+
+			<div class="row scorecard">
+				<div id="totalRight">Correct:</div>
+				<div id="totalWrong">Incorrect:</div>
+				<div id="unanswered">Unanswered:</div>
+			</div>
+
+
+
+
+
+
+
+
 			
 		</div> <!-- wrapper -->
 		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/javascript/app.js"></script>
 	</body>
 </html>
+
+<!-- Initial thoughts, use jquery to insert changes into divs, create new divs and delete old ones. keep all on same page. use array to compare answers. add class to new divs to keep formatting. -->
