@@ -10,22 +10,22 @@ $(document).ready(function() {
     var time;
     var questionOn;
 
-    var textAnswers = ["empty", "T-Rex", "Dinosaur", "Paleozoic"]
+    var textAnswers = ["empty", "Terrible Lizzard", "Paleontologist", "Brachiosaurus", "Dino", "Titanosaur", "Ankylosaurus","Micheal Crichton","Brontosaurus","Cambrian","65 million years"]
 
 
     // Hiding questions and bumper on start up. Set question number to 1.
     function startpage() 
     {
-        $(".question, .bumper, .timer").hide();
+        $(".question, .bumper, .timer, .scorecard").hide();
         $("#startbutton").show();
-        questionNum = 1;
         questionOn = false;
-        clearInterval(interval);
     }
 
     // On click for start button. Shows Q1 and hides the button.
     $("#startbutton").click(function() 
     {
+        questionNum = 1;
+        $(".bumper, .scorecard").hide();
         showquestion();
         timer();
     });
@@ -33,12 +33,23 @@ $(document).ready(function() {
     function showquestion() 
     {
         $("#q" + questionNum).show();
-        $("#timer").show();
+        $(".timer").show();
         $("#startbutton").hide();
-        time = 10;
+        time = 8;
         questionOn = true;
+        correct = undefined;
         // questionTimer();
     };
+
+    function showScorecard()
+    {
+        $(".bumper, .timer").hide();
+        $("#q" + questionNum).hide();
+        $(".scorecard").show();
+        $("#totalRight").text("Correct: " + totalRight);
+        $("#totalWrong").text("Incorrect: " + totalWrong);
+        $("#unanswered").text("Unanswered: " + unanswered);
+    }
 
     // On click event to determine if choice is correct. Run Bumper function.
     $(".answer").click(function() 
@@ -62,7 +73,7 @@ $(document).ready(function() {
     function bumper() 
     {
         questionOn = false;
-        time = 7;
+        time = 5;
         $("#correct").text("The answer is " + textAnswers[questionNum]);
         $("#bumperImage").attr("src", "assets/images/" + "ruby.png")  // need to make array of image names. make placment match questionNum.
         if (correct == true) 
@@ -82,6 +93,7 @@ $(document).ready(function() {
         // }
         questionNum++;
         $(".bumper").show();
+        $(".timer").hide();
         console.log("Right: " + totalRight, "Wrong: " + totalWrong, "Unanswered: " + unanswered, "Question#: " + questionNum);
         // bumperCountdown();
     }
@@ -150,17 +162,17 @@ $(document).ready(function() {
         if(time === 0 && questionOn === true) 
         {
             unanswered++;
+            $("#q" + questionNum).hide();
             bumper();
         } else if (time === 0 && questionOn === false) 
         {
             if (questionNum < 11) 
                 {
-                    time = 10;
-                    questionOn = true;
-                    $("#q" + questionNum).show();
+                    $(".bumper").hide();
+                    showquestion();
                 } else 
                 {
-                    $(".scorecard").show();
+                    showScorecard();
                     $("#startbutton").show();
                     clearInterval(interval);
                 }
@@ -168,14 +180,11 @@ $(document).ready(function() {
     }
 
     function timeConverter(t) 
-    {
-        
+    { 
         var seconds = t;
-    
         if (seconds < 10) {
             seconds = "0" + seconds;
         }
-    
         return ":" + seconds;
     }
         
