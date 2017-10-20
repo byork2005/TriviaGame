@@ -4,16 +4,15 @@ $(document).ready(function() {
     var totalWrong = 0;
     var unanswered = 0;
     var correct;
-    var totalTime;
     var questionNum = 1;
     var interval;
     var time;
     var questionOn;
 
     var textAnswers = ["empty", "Terrible Lizzard", "Paleontologist", "Brachiosaurus", "Dino", "Titanosaur", "Ankylosaurus","Micheal Crichton","Brontosaurus","Cambrian","65 million years"]
+    var pictures = ["","terriblelizard.jpg","fossils.gif","brachiosaurus.gif","dino.jpg","titanosaur.gif","ankylosaurus.gif","michaelcrichton.jpg","apatosaurus.gif","mesotimeline.gif","meteor.gif"]
 
-
-    // Hiding questions and bumper on start up. Set question number to 1.
+    // Hiding questions, bumper, timer and scorecard on start up.
     function startpage() 
     {
         $(".question, .bumper, .timer, .scorecard").hide();
@@ -38,7 +37,6 @@ $(document).ready(function() {
         time = 8;
         questionOn = true;
         correct = undefined;
-        // questionTimer();
     };
 
     function showScorecard()
@@ -75,78 +73,24 @@ $(document).ready(function() {
         questionOn = false;
         time = 5;
         $("#correct").text("The answer is " + textAnswers[questionNum]);
-        $("#bumperImage").attr("src", "assets/images/" + "ruby.png")  // need to make array of image names. make placment match questionNum.
+        $("#bumperImage").attr("src", "assets/images/" + pictures[questionNum])
         if (correct == true) 
         {
             $("#message").text("You Are Correct!");
             totalRight++;
         } else if (correct == false) {
-            $("#message").text("Sorry, Wrong!");
+            $("#message").text("Better Luck Next Time!");
             totalWrong++;
         } else {
-            $("#message").text("Sorry, Wrong!"); 
+            $("#message").text("Out of Time!"); 
         }
-    
-        // {  
-        //     $("#message").text("Sorry, Wrong!");
-        //     totalWrong++;
-        // }
         questionNum++;
         $(".bumper").show();
         $(".timer").hide();
         console.log("Right: " + totalRight, "Wrong: " + totalWrong, "Unanswered: " + unanswered, "Question#: " + questionNum);
-        // bumperCountdown();
     }
 
-    // Timer to run bumper or next question. Reset time and switch. End Game.
-    // if(time === 0 && questionOn === true) 
-    // {
-    //     bumper();
-    //     unanswered++;
-    // } else if (time === 0 && questionOn === false) 
-    // {
-    //     if (questionNum < 11) 
-    //         {
-    //             time = 10;
-    //             questionOn = true;
-    //             $("#q" + questionNum).show();
-    //         } else 
-    //         {
-    //             $(".scorecard").show();
-    //             $("#startbutton").show();
-    //             clearInterval(interval);
-    //         }
-    // }
-    
-
-    // 7 second timer to show bumper. Check round; then hide bumper and show next question or move to scorecard page.
-    // function bumperCountdown() 
-    // {
-
-    //     setTimeout(function() 
-    //         {
-    //             $(".bumper").hide();
-    //             if (questionNum < 11) 
-    //             {
-    //                 questionTimer();
-    //                 $("#q" + questionNum).show();
-    //             } else {
-    //                 $(".scorecard").show();
-    //                 $("#startbutton").show();
-    //             }
-    //         }, 1000 * 7);
-    // }
-
-    // Question timer
-    // function questionTimer() 
-    // {
-    //     setTimeout(function() 
-    //     {
-    //         bumper();
-    //         unanswered++;
-    //     }, 1000 * 10);
-    // }
-
+    // Runs the decreasing countdown. Based on questionOn and when clock = 0 it knows what to run.
     function timer() 
     {
         interval = setInterval(count, 1000);
@@ -158,7 +102,6 @@ $(document).ready(function() {
         var convert = timeConverter(time);
         $("#timer").text(convert);
         console.log(time, questionNum, questionOn);
-
         if(time === 0 && questionOn === true) 
         {
             unanswered++;
@@ -179,6 +122,7 @@ $(document).ready(function() {
         }
     }
 
+    // Displays time in normal format
     function timeConverter(t) 
     { 
         var seconds = t;
@@ -188,8 +132,6 @@ $(document).ready(function() {
         return ":" + seconds;
     }
         
-
-
     startpage();
 
 });

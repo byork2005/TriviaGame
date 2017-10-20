@@ -14,153 +14,172 @@
 		<div class="wrapper">
 
 			<header class="row">
-				<div>Prehistoric Trivia!</div>
+				<h1 class="center">Prehistoric Trivia</h1>
 			</header>
 
 			<div class="row">
-				<button id="startbutton"> Start Game </button>
-			</div>
-
-			<div class="row timer">
-				<div id="timer">:08</div>
-			</div>
-
-			<!-- Questions -->
-			<div class="row question" id="q1">
-				<div class="questionText">What does the word dinosaur mean?</div>
-				<div>
-					<ul>
-						<li class="answer">Giant Reptile</li>
-						<li class="answer">Fantastic Beast</li>  
-						<li class="answer">Scary Iguana</li>
-						<li class="answer true">Terrible Lizzard</li>
-					</ul>
+				<div class="center">
+					<button id="startbutton"> Start Game </button>
 				</div>
 			</div>
 
-			<div class="row question" id="q2">
-				<div class="questionText">Who studies prehistoric fossiles?</div>
-				<div>
-					<ul>
-						<li class="answer">Archaeologist</li>
-						<li class="answer true">Paleontologist</li>
-						<li class="answer">Biologist</li>
-						<li class="answer">Antropoligist</li>
-					</ul>
+			<div class="contentbox">
+
+				<div class="row timer">
+					<div class="center" id="timer">:08</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q3">
-				<div class="questionText">Which one was a sauropod?</div>
-				<div>
-					<ul>
-						<li class="answer">Triceratops</li>
-						<li class="answer">Velocirapter</li>
-						<li class="answer true">Brachiosaurus</li>
-						<li class="answer">Parasaurolophus</li>
-					</ul>
+				<!-- Questions -->
+				<div class="row question" id="q1">
+					<div class="questionText">What does the word dinosaur mean?</div>
+					<br>
+					<div>
+						<ul>
+							<li class="answer">Giant Reptile</li>
+							<li class="answer">Fantastic Beast</li>  
+							<li class="answer">Scary Iguana</li>
+							<li class="answer true">Terrible Lizard</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q4">
-				<div class="questionText">What was the Flintstones' pet named?</div>
-				<div>
-					<ul>
-						<li class="answer true">Dino</li>
-						<li class="answer">Rexy</li>
-						<li class="answer">Barney</li>
-						<li class="answer">Fido</li>
-					</ul>
+				<div class="row question" id="q2">
+					<div class="questionText">Who studies prehistoric fossils?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer">Archaeologist</li>
+							<li class="answer true">Paleontologist</li>
+							<li class="answer">Biologist</li>
+							<li class="answer">Antropoligist</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q5">
-				<div class="questionText">What was the largest dinosaur ever found?</div>
-				<div>
-					<ul>
-						<li class="answer">Compsognathus</li>
-						<li class="answer">Velociraptor</li>
-						<li class="answer true">Titanosaur</li>
-						<li class="answer">Triceratops</li>
-					</ul>
+				<div class="row question" id="q3">
+					<div class="questionText">Which one was a sauropod?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer">Triceratops</li>
+							<li class="answer">Velocirapter</li>
+							<li class="answer true">Brachiosaurus</li>
+							<li class="answer">Parasaurolophus</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q6">
-				<div class="questionText">What dinosaur is show below?</div>
-				<img>
-				<div>
-					<ul>
-						<li class="answer">Mosasaurus</li>
-						<li class="answer">Stegosaurus</li>
-						<li class="answer">Diplodocus</li>
-						<li class="answer true">Ankylosaurus</li>
-					</ul>
+				<div class="row question" id="q4">
+					<div class="questionText">What was the Flintstones' pet named?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer true">Dino</li>
+							<li class="answer">Rexy</li>
+							<li class="answer">Barney</li>
+							<li class="answer">Fido</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q7">
-				<div class="questionText">Who wrote the book Jurrasic Park?</div>
-				<div>
-					<ul>
-						<li class="answer">Jeff Goldblum</li>
-						<li class="answer">Steven Spielberg</li>
-						<li class="answer true">Micheal Crichton</li>
-						<li class="answer">Richard Attenborough</li>
-					</ul>
+				<div class="row question" id="q5">
+					<div class="questionText">What was the largest dinosaur ever found?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer">Compsognathus</li>
+							<li class="answer">Velociraptor</li>
+							<li class="answer true">Titanosaur</li>
+							<li class="answer">Triceratops</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q8">
-				<div class="questionText">Apatosarous is widely known by what other name?</div>
-				<div>
-					<ul>
-						<li class="answer true">Brontosaurus</li>
-						<li class="answer">Stegosaurus</li>
-						<li class="answer">Tyrannosaurus Rex</li>
-						<li class="answer">Pteranodon</li>
-					</ul>
+				<div class="row question" id="q6">
+					<div class="questionText">What dinosaur is show below?</div>
+					<img id="q6image" src="assets/images/ankylosaurus.jpg" alt="?">
+					<div>
+					<br>
+						<ul>
+							<li class="answer">Mosasaurus</li>
+							<li class="answer">Stegosaurus</li>
+							<li class="answer">Diplodocus</li>
+							<li class="answer true">Ankylosaurus</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q9">
-				<div class="questionText">What is not part of the Mesazoic Era, widely considered the hieght of dinosaurs?</div>
-				<div>
-					<ul>
-						<li class="answer">Jurassic</li>
-						<li class="answer true">Cambrian</li>
-						<li class="answer">Triassic</li>
-						<li class="answer">Cretaceous</li>
-					</ul>
+				<div class="row question" id="q7">
+					<div class="questionText">Who wrote the book Jurrasic Park?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer">Jeff Goldblum</li>
+							<li class="answer">Steven Spielberg</li>
+							<li class="answer true">Micheal Crichton</li>
+							<li class="answer">Richard Attenborough</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="row question" id="q10">
-				<div class="questionText">How many years ago did the dinosaurs die out?</div>
-				<div>
-					<ul>
-						<li class="answer">10,000 years</li>
-						<li class="answer true">65 million years</li>
-						<li class="answer">300 million years</li>
-						<li class="answer">1 billion years</li>
-					</ul>
+				<div class="row question" id="q8">
+					<div class="questionText">Apatosarous is widely known by what other name?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer true">Brontosaurus</li>
+							<li class="answer">Stegosaurus</li>
+							<li class="answer">Tyrannosaurus Rex</li>
+							<li class="answer">Pteranodon</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<!-- Bumper -->
+				<div class="row question" id="q9">
+					<div class="questionText">What is not part of the Mesazoic Era, widely considered the hieght of dinosaurs?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer">Jurassic</li>
+							<li class="answer true">Cambrian</li>
+							<li class="answer">Triassic</li>
+							<li class="answer">Cretaceous</li>
+						</ul>
+					</div>
+				</div>
 
-			<div class="row bumper">
-				<div id="message">Message</div>
-				<div id="correct">The answer is:</div>
-				<img src="assets/images/sapphire.png" id="bumperImage" alt="">
-			</div>
+				<div class="row question" id="q10">
+					<div class="questionText">How many years ago did the dinosaurs die out?</div>
+					<div>
+					<br>
+						<ul>
+							<li class="answer">10,000 years</li>
+							<li class="answer true">65 million years</li>
+							<li class="answer">300 million years</li>
+							<li class="answer">1 billion years</li>
+						</ul>
+					</div>
+				</div>
 
-			<!-- Scorecard -->
+				<!-- Bumper -->
 
-			<div class="row scorecard">
-				<div id="totalRight">Correct:</div>
-				<div id="totalWrong">Incorrect:</div>
-				<div id="unanswered">Unanswered:</div>
+				<div class="row bumper center">
+					<div id="message">Message</div>
+					<br>
+					<div id="correct">The answer is:</div>
+					<br>
+					<img src="assets/images/terriblelizard.jpeg" id="bumperImage" alt="">
+					<br>
+				</div>
+
+				<!-- Scorecard -->
+
+				<div class="row scorecard center">
+					<div id="totalRight">Correct:</div>
+					<div id="totalWrong">Incorrect:</div>
+					<div id="unanswered">Unanswered:</div>
+				</div>
+
 			</div>
 	
 		</div> <!-- wrapper -->
@@ -169,78 +188,3 @@
 		<script type="text/javascript" src="assets/javascript/app.js"></script>
 	</body>
 </html>
-
-<!-- 
-Questions
-What does the word dinosaur mean? X
-	Terrible Lizzard
-	Giant Reptile
-	Scary Iguana
-	Fantastic Beast
-
-Who wrote the book Jurrasic Park? X
-	Micheal Crichton
-	Steven Spielberg
-	Jeff Goldblum
-	Richard Attenborough
-
-What was the Flintstones' pet named? X
-	Dino
-	Rexy
-	Barney
-	Fido
-
-Apatosarous is widely known by what other name? X
-	Brontosaurus
-	Stegosaurus
-	Tyrannosaurus Rex
-	Pteranodon
-
-Who studies prehistoric fossiles? X
-	Paleontologist
-	Archaeologist
-	Antropoligist
-	Biologist
-
-Which one was a sauropod? X
-	Triceratops
-	Brachiosaurus
-	Velocirapter
-	Parasaurolophus
-
-What dinosaur is show below? (pic of ankylosaurus) X
-	Ankylosaurus
-	Stegosaurus
-	Diplodocus
-	Mosasaurus
-
-What is not part of the Mesazoic Era, widely considered the hieght of dinosaurs? X
-	Cretaceous
-	Jurassic
-	Triassic
-	Cambrian
-
-What was the largest dinosaur ever found? X
-	Titanosaur
-	Triceratops
-	Compsognathus
-	Velociraptor
-
-How many years ago did the dinosaurs die out?
-	65 million years
-	300 million years
-	10,000 years
-	1 billion years
-
-
-
-
-
-
-
-
-
-
-
-
--->
